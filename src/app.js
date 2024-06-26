@@ -11,4 +11,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to inddev server." });
 });
 
+import { userRouter } from "./routes/user.routes.js";
+app.use("/api/users", userRouter);
+
 export { app };
