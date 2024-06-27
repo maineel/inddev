@@ -4,19 +4,119 @@
 
 ## Setup and running
 
-- Clone this repository and run npm i in the terminal
-- After that run npm run dev
+- Clone this repository and run `npm install` in the terminal
+- After that run `npm run dev`
 - The server will be up and running
 
 ## Express Router and Routes
 
 | Route               | HTTP Verb | Description                          |
 | --------------------| --------- | ------------------------------------ |
-| /api/users          | GET       | To List all users                    |
 | /api/users          | POST      | To create a new user                 |
+| /api/users          | GET       | To List all users                    |
 | /api/users/:id      | GET       | Get detials of a user                |
 | /api/users/:id      | PUT       | Update details of a single user      |
 | /api/users/:id      | DELETE    | Deletes a user                       |
+
+## Usage
+The use of endpoints is very simple, previously you could see a table of endpoints that you can call, if you need to create a note or log in, here we have some examples.
+
+### Registration **user** - `POST` `/api/users`:
+Request Body:
+```json
+    {
+      "id": 2,
+      "first_name": "Josephine",
+      "last_name": "Darakjy",
+      "company_name": "Chanay, Jeffrey A Esq",
+      "city": "Brighton",
+      "state": "MI",
+      "zip": 48116,
+      "email": "josephine_darakjy@darakjy.org",
+      "web": "http://www.chanayjeffreyaesq.com",
+      "age": 48
+    }
+```
+Response: 
+`Status Code: 201`
+```json
+       {}
+```
+
+### Fetch **users** - `GET` `/api/users`:
+Response:
+`Status Code: 200`
+```json
+    [
+      {
+        "id": 1,
+        "first_name": "James",
+        "last_name": "Butt",
+        "company_name": "Benton, John B Jr",
+        "city": "New Orleans",
+        "state": "LA",
+        "zip": 70116,
+        "email": "jbutt@gmail.com",
+        "web": "http://www.bentonjohnbjr.com",
+        "age": 70
+      },
+      {
+        "id": 2,
+        "first_name": "Josephine",
+        "last_name": "Darakjy",
+        "company_name": "Chanay, Jeffrey A Esq",
+        "city": "Brighton",
+        "state": "MI",
+        "zip": 48116,
+        "email": "josephine_darakjy@darakjy.org",
+        "web": "http://www.chanayjeffreyaesq.com",
+        "age": 48
+      }
+    ]
+```
+
+Sample Query: `/api/users?page=1&limit=10&search=James&sort=-age` <br>
+This endpoint should return list of 10 users whose first name or last name contains substring given name and sort the users by age in descending order of page 1.
+
+### Fetch **user** - `GET` `/api/users/:id`:
+Here `{id}` would be the user ID in path parameter
+Response:
+`Status Code: 200`
+```json
+    {
+      "id": 1,
+      "first_name": "James",
+      "last_name": "Butt",
+      "company_name": "Benton, John B Jr",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": 70116,
+      "email": "jbutt@gmail.com",
+      "web": "http://www.bentonjohnbjr.com",
+      "age": 70
+    }
+```
+
+### Update **user** - `PUT` `/api/users/:id`:
+Here `{id}` would be the user ID in path parameter
+Request Body:
+ ```json
+       {
+         "first_name": "Josephine",
+         "last_name": "Darakjy",
+         "age": 48
+       }
+ ```
+Response:
+`Status Code: 200`
+```json
+  {}
+```
+
+### Delete **user** - `DELETE` `/api/users/:id`:
+Here `{id}` would be the user ID in path parameter
+Response:
+`Status Code: 204`
 
 ## Questions
 
