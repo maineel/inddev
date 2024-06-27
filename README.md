@@ -2,9 +2,11 @@
 - Javascript
 - Mongoose ODM
 
-1. Clone this repository and run npm i in the terminal
-2. After that run npm run dev
-3. The server will be up and running
+## Setup and running
+
+- Clone this repository and run npm i in the terminal
+- After that run npm run dev
+- The server will be up and running
 
 1. How long did it take you to complete this assignment? - Approximately 2 Hours
 
