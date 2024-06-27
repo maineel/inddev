@@ -8,6 +8,16 @@
 - After that run npm run dev
 - The server will be up and running
 
+## Express Router and Routes
+
+| Route               | HTTP Verb | Description                          |
+| --------------------| --------- | ------------------------------------ |
+| /api/users          | GET       | To List all users                    |
+| /api/users          | POST      | To create a new user                 |
+| /api/users/:id      | GET       | Get detials of a user                |
+| /api/users/:id      | PUT       | Update details of a single user      |
+| /api/users/:id      | DELETE    | Deletes a user                       |
+
 ## Questions
 
 1. How long did it take you to complete this assignment? - Approximately 2 Hours
