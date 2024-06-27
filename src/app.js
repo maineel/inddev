@@ -18,8 +18,11 @@ const options = {
     },
     servers: [
       {
-        url: ["https://inddev.onrender.com"]
+        url: "http://localhost:8000"
       },
+      {
+        url: "https://inddev.onrender.com"
+      }
     ],
   },
   apis: ['src/models/*.js', 'src/routes/*.js'],
