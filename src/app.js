@@ -18,7 +18,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:8000",
+        url: ["http://localhost:8000","https://inddev.onrender.com"]
       },
     ],
   },
