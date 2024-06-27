@@ -79,7 +79,7 @@ Sample Query: `/api/users?page=1&limit=10&search=James&sort=-age` <br>
 This endpoint should return list of 10 users whose first name or last name contains substring given name and sort the users by age in descending order of page 1.
 
 ### Fetch **user** - `GET` `/api/users/:id`:
-Here `{id}` would be the user ID in path parameter
+Here `{id}` would be the user ID in path parameter <br>
 Response:
 `Status Code: 200`
 ```json
@@ -98,7 +98,7 @@ Response:
 ```
 
 ### Update **user** - `PUT` `/api/users/:id`:
-Here `{id}` would be the user ID in path parameter
+Here `{id}` would be the user ID in path parameter <br>
 Request Body:
  ```json
        {
@@ -114,7 +114,7 @@ Response:
 ```
 
 ### Delete **user** - `DELETE` `/api/users/:id`:
-Here `{id}` would be the user ID in path parameter
+Here `{id}` would be the user ID in path parameter <br>
 Response:
 `Status Code: 204`
 
