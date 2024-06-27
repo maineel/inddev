@@ -17,7 +17,7 @@
 | /api/users/:id      | GET       | Get detials of a user                |
 | /api/users/:id      | PUT       | Update details of a single user      |
 | /api/users/:id      | DELETE    | Deletes a user                       |
-| /api-docs           | GET       | Swagger API Documentation            |
+| /api-docs           | GET       | API Documentation                    |
 
 ## Usage
 The use of endpoints is very simple, previously you could see a table of endpoints that you can call, if you need to create a note or log in, here we have some examples.
